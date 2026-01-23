@@ -118,14 +118,14 @@ export const NowSection = () => {
 
           <div className="mt-8 flex justify-center gap-6">
             <a 
-              href="mailto:julian@example.com"
+              href="mailto:jla.schwab@gmail.com"
               className="text-sm text-foreground hover:text-muted-foreground transition-colors"
               data-cursor="link"
             >
               Email
             </a>
             <a 
-              href="https://github.com/julian"
+              href="https://github.com/julianschwabcommits"
               target="_blank"
               rel="noopener noreferrer"
               className="text-sm text-foreground hover:text-muted-foreground transition-colors"
@@ -134,7 +134,7 @@ export const NowSection = () => {
               GitHub
             </a>
             <a 
-              href="https://linkedin.com/in/julian"
+              href="https://linkedin.com/in/schwab-julian"
               target="_blank"
               rel="noopener noreferrer"
               className="text-sm text-foreground hover:text-muted-foreground transition-colors"
