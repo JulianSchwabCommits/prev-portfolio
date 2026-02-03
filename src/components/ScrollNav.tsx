@@ -1,3 +1,5 @@
+'use client';
+
 import { useSectionObserver } from '@/hooks/useSectionObserver';
 import { useScrollProgress } from '@/hooks/useScrollProgress';
 

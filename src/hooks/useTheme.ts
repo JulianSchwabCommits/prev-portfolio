@@ -1,26 +1,14 @@
-import { useState, useEffect, useCallback } from 'react';
+'use client';
+
+import { useTheme as useNextTheme } from 'next-themes';
 
 export const useTheme = () => {
-  const [isDark, setIsDark] = useState(() => {
-    if (typeof window !== 'undefined') {
-      const stored = localStorage.getItem('theme');
-      if (stored) return stored === 'dark';
-      return window.matchMedia('(prefers-color-scheme: dark)').matches;
-    }
-    return false;
-  });
+  const { theme, setTheme } = useNextTheme();
+  const isDark = theme === 'dark';
 
-  useEffect(() => {
-    const root = document.documentElement;
-    if (isDark) {
-      root.classList.add('dark');
-    } else {
-      root.classList.remove('dark');
-    }
-    localStorage.setItem('theme', isDark ? 'dark' : 'light');
-  }, [isDark]);
-
-  const toggle = useCallback(() => setIsDark(prev => !prev), []);
+  const toggle = () => {
+    setTheme(isDark ? 'light' : 'dark');
+  };
 
   return { isDark, toggle };
 };

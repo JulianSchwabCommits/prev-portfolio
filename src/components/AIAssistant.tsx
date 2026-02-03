@@ -1,3 +1,5 @@
+'use client';
+
 import { useState, useEffect, useRef } from 'react';
 import { X, Sparkles } from 'lucide-react';
 import gsap from 'gsap';

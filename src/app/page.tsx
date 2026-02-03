@@ -1,3 +1,5 @@
+'use client';
+
 import CustomCursor from '@/components/CustomCursor';
 import ThemeToggle from '@/components/ThemeToggle';
 import ScrollNav from '@/components/ScrollNav';
@@ -10,7 +12,7 @@ import ProjectsSection from '@/components/sections/ProjectsSection';
 import WorkSection from '@/components/sections/WorkSection';
 import NowSection from '@/components/sections/NowSection';
 
-const Index = () => {
+export default function Home() {
   return (
     <>
       {/* Global UI elements */}
@@ -31,6 +33,4 @@ const Index = () => {
       </main>
     </>
   );
-};
-
-export default Index;
+}
